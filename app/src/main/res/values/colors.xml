@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#838080</color>
+    <color name="colorPrimaryDark">#5F5E5E</color>
+    <color name="colorAccent">#FD703E</color>
+
+    <color name="incomingTextMsg">@color/colorPrimary</color>
+    <color name="outcomingTextMsg">@color/colorAccent</color>
+
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorWhite">#ffffffff</color>
+
+    <color name="textColorWhite">#FFFFFF</color>
+    <color name="textColorGray">#838080</color>
+</resources>

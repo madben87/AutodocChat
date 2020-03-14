@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.ben.autodocchat"
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(path: ':model')
+    implementation project(path: ':datamodule')
+
+    implementation Dependencies.kotlinStdlib
+    implementation Dependencies.appCompat
+    implementation Dependencies.ktxCore
+    implementation Dependencies.constraintLayout
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation Dependencies.junit
+    androidTestImplementation Dependencies.espressoCore
+
+    implementation Dependencies.lifecycle
+
+    implementation Dependencies.koinCore
+    implementation Dependencies.koinAndroid
+    implementation Dependencies.koinScopes
+    implementation Dependencies.koinViewModels
+
+    implementation Dependencies.rxJava
+    implementation Dependencies.rxAndroid
+    implementation Dependencies.rxKotlin
+
+    implementation Dependencies.glide
+
+    implementation Dependencies.recyclerview
+    implementation Dependencies.material
+}
